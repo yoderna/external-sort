@@ -1,16 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Project:	External Sort
+//        Project:  External Sort
 //
-//	  File Name:	FileInteger.h
+//	    File Name:  FileInteger.h
 //
-//		 Author:	Nicholas Yoder
+//         Author:  Nicholas Yoder
 //
-//		Contact:	yoderna@etsu.edu
-//
-//	Description:	This file contains the FileInteger struct declaration, which represents an integer read
-//					from a file. It contains a pointer to the ifstream object it was read from,	the number
-//					of integers left to read from the file, and the value that this struct represents.
+//    Description:  This file contains the FileInteger struct declaration, which represents an integer read
+//                  from a file. It contains a pointer to the ifstream object it was read from,	the number
+//                  of integers left to read from the file, and the value that this struct represents.
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

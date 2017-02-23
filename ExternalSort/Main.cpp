@@ -6,9 +6,8 @@
 //
 //         Author:    Nicholas Yoder
 //
-//
 //    Description:    This file contains the entry point of the program and
-//					  functions for performing external sort on a binary file.
+//                    functions for performing external sort on a binary file.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -25,11 +24,11 @@ int fileLen(std::ifstream&);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//	Function Name:	main
+//  Function Name:  main
 //
-//		  Purpose:	Receives user input for the unsorted file name, the file to output the sorted
-//					values to, and the maximum number of integers from a file that should be allowed
-//					in memory simultaneously. Then, calls functions to perform the sort.
+//        Purpose:  Receives user input for the unsorted file name, the file to output the sorted
+//                  values to, and the maximum number of integers from a file that should be allowed
+//                  in memory simultaneously. Then, calls functions to perform the sort.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 int main()
@@ -76,19 +75,19 @@ int main()
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//	Function Name:	makeTempFiles
+//  Function Name:  makeTempFiles
 //
-//		  Purpose:	Where k is the maximum number of ints from a file allowed in memory simultaneously,
-//					this function reads k ints from the unsorted file, sorts them, writes them out to a
-//					new file, and repeats until all ints in the unsorted file have been read.
+//        Purpose:  Where k is the maximum number of ints from a file allowed in memory simultaneously,
+//                  this function reads k ints from the unsorted file, sorts them, writes them out to a
+//                  new file, and repeats until all ints in the unsorted file have been read.
 //
-//		Parameter:	unsortedFile is an ifstream object that has already opened the file to sort.
+//      Parameter:  unsortedFile is an ifstream object that has already opened the file to sort.
 //
-//		Parameter:	maxFileInts is the maximum number of integers from the file that are allowed in
-//					memory simultaneously. As a result, it is also the number of integers written to
-//					each temp file.
+//      Parameter:  maxFileInts is the maximum number of integers from the file that are allowed in
+//                  memory simultaneously. As a result, it is also the number of integers written to
+//                  each temp file.
 //
-//		  Returns:	The number of temp files created.
+//        Returns:  The number of temp files created.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 int makeTempFiles(std::ifstream& unsortedFile, int maxFileInts)
@@ -129,17 +128,17 @@ int makeTempFiles(std::ifstream& unsortedFile, int maxFileInts)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//	Function Name:	mergeTempFiles
+//  Function Name:  mergeTempFiles
 //
-//		  Purpose:	Continuously merges all temp files created until only one large sorted file remains.
+//        Purpose:  Continuously merges all temp files created until only one large sorted file remains.
 //
-//		Parameter:	totalNumberOfFiles is the number of files that need to be merged.
+//      Parameter:  totalNumberOfFiles is the number of files that need to be merged.
 //
-//		Parameter:	maxFileInts is the maximum number of integers from a file that are allowed in memory
-//					simultaneously. As a result, it is also the maximum number of files that are merged
-//					at one time.
+//      Parameter:  maxFileInts is the maximum number of integers from a file that are allowed in memory
+//                  simultaneously. As a result, it is also the maximum number of files that are merged
+//                  at one time.
 //
-//		Parameter:	sortedPath will be the path/name of the file once it is sorted.
+//      Parameter:  sortedPath will be the path/name of the file once it is sorted.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 void mergeTempFiles(int totalNumberOfFiles, int maxFileInts, std::string& sortedPath)
@@ -237,13 +236,13 @@ void mergeTempFiles(int totalNumberOfFiles, int maxFileInts, std::string& sorted
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//	Function Name:	fileLen
+//  Function Name:  fileLen
 //
-//		  Purpose:	Determines the length in bytes of an input file.
+//        Purpose:  Determines the length in bytes of an input file.
 //
-//		Parameter:	file is an ifstream object with the file to determine the length of already open.
+//      Parameter:  file is an ifstream object with the file to determine the length of already open.
 //
-//		  Returns:	The length of the file in bytes.
+//        Returns:  The length of the file in bytes.
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 int fileLen(std::ifstream& file)

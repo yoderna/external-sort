@@ -2,7 +2,7 @@
 //
 //        Project:  External Sort
 //
-//	    File Name:  FileInteger.h
+//      File Name:  FileInteger.h
 //
 //         Author:  Nicholas Yoder
 //

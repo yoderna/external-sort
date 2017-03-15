@@ -247,15 +247,15 @@ void mergeTempFiles(int totalNumberOfFiles, int maxFileInts, std::string& sorted
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 int fileLen(std::ifstream& file)
 {
-	int position = file.tellg();
+	int position = (int)file.tellg();
 
 	file.seekg(0, std::ios::beg);
 
-	int start = file.tellg();
+	int start = (int)file.tellg();
 
 	file.seekg(0, std::ios::end);
 
-	int end = file.tellg();
+	int end = (int)file.tellg();
 
 	file.clear();
 
